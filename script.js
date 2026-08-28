@@ -23,7 +23,8 @@ if (quickscanForm) {
       quickscanForm.reset();
       quickscanForm.hidden = true;
       successMessage.hidden = false;
-    }, 700);
+      successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 120);
   });
 }
 
