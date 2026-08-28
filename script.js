@@ -42,9 +42,17 @@ document.querySelectorAll('.package[data-href]').forEach((card) => {
 
 const carousel = document.querySelector('#articleCarousel');
 if (carousel) {
-  const move = (direction) => carousel.scrollBy({ left: carousel.clientWidth * .54 * direction, behavior: 'smooth' });
-  document.querySelector('.carousel-button.prev').addEventListener('click', () => move(-1));
-  document.querySelector('.carousel-button.next').addEventListener('click', () => move(1));
+  const cards = [...carousel.children];
+  let pairIndex = 1;
+  const centerPair = (index, behavior = 'smooth') => {
+    pairIndex = Math.max(0, Math.min(index, cards.length - 2));
+    const first = cards[pairIndex];
+    const second = cards[pairIndex + 1];
+    const pairWidth = second.offsetLeft + second.offsetWidth - first.offsetLeft;
+    carousel.scrollTo({ left: first.offsetLeft - (carousel.clientWidth - pairWidth) / 2, behavior });
+  };
+  document.querySelector('.carousel-button.prev').addEventListener('click', () => centerPair(pairIndex - 1));
+  document.querySelector('.carousel-button.next').addEventListener('click', () => centerPair(pairIndex + 1));
   const updateFocus = () => {
     const middle = carousel.scrollLeft + carousel.clientWidth / 2;
     [...carousel.children].forEach((card) => {
@@ -54,7 +62,7 @@ if (carousel) {
   };
   carousel.addEventListener('scroll', updateFocus, { passive: true });
   window.addEventListener('load', () => {
-    carousel.scrollLeft = carousel.children[0].offsetWidth * 1.05;
+    centerPair(1, 'auto');
     updateFocus();
   });
 }
