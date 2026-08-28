@@ -48,17 +48,17 @@ if (carousel) {
     pairIndex = Math.max(0, Math.min(index, cards.length - 2));
     const first = cards[pairIndex];
     const second = cards[pairIndex + 1];
-    const pairWidth = second.offsetLeft + second.offsetWidth - first.offsetLeft;
-    carousel.scrollTo({ left: first.offsetLeft - (carousel.clientWidth - pairWidth) / 2, behavior });
+    cards.forEach((card, cardIndex) => card.classList.toggle('in-focus', cardIndex === pairIndex || cardIndex === pairIndex + 1));
+    const pairCenter = (first.offsetLeft + second.offsetLeft + second.offsetWidth) / 2;
+    carousel.scrollTo({ left: pairCenter - carousel.clientWidth / 2, behavior });
   };
   document.querySelector('.carousel-button.prev').addEventListener('click', () => centerPair(pairIndex - 1));
   document.querySelector('.carousel-button.next').addEventListener('click', () => centerPair(pairIndex + 1));
   const updateFocus = () => {
     const middle = carousel.scrollLeft + carousel.clientWidth / 2;
-    [...carousel.children].forEach((card) => {
-      const cardMiddle = card.offsetLeft + card.offsetWidth / 2;
-      card.classList.toggle('in-focus', Math.abs(middle - cardMiddle) < card.offsetWidth * .75);
-    });
+    const nearest = cards.map((card, index) => ({ index, distance: Math.abs(middle - (card.offsetLeft + card.offsetWidth / 2)) })).sort((a, b) => a.distance - b.distance).slice(0, 2).map(item => item.index);
+    pairIndex = Math.min(...nearest);
+    cards.forEach((card, index) => card.classList.toggle('in-focus', nearest.includes(index)));
   };
   carousel.addEventListener('scroll', updateFocus, { passive: true });
   window.addEventListener('load', () => {
