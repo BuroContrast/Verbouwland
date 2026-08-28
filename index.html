@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Verbouwland helpt je met persoonlijk advies voor jouw verbouwing.">
+  <title>Verbouwland — Jouw verbouwing goed geregeld</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Verbouwland home"><img src="assets/verbouwland-logo.png" alt="Verbouwland"></a>
+    <nav aria-label="Hoofdnavigatie">
+      <a class="active" href="index.html">Home</a><a href="bestemming.html?pagina=rapporten">Rapporten</a><a href="bestemming.html?pagina=artikelen">Artikelen</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="button button-purple header-cta" href="#quickscan">Gratis Verbouwcheck</a>
+  </header>
+
+  <main>
+    <section class="hero"><div class="hero-cutout" aria-hidden="true"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Vraag nu de <span>gratis<br>Verbouwcheck</span> aan!</h1>
+        <p>Ontvang binnen 24 uur advies op basis van<br>jouw persoonlijke situatie.</p>
+        <form class="address-form" id="quickscan" action="bestemming.html" method="get">
+          <input type="hidden" name="pagina" value="quickscan">
+          <label>Postcode<input name="postcode" autocomplete="postal-code" inputmode="text" placeholder="1234 AB" maxlength="7" required pattern="[1-9][0-9]{3}\s?[A-Za-z]{2}" title="Vul vier cijfers en twee letters in, bijvoorbeeld 1234 AB"></label>
+          <label>Huisnummer<input name="huisnummer" inputmode="numeric" placeholder="69" required></label>
+          <button class="button button-yellow" type="submit">Gratis Verbouwcheck</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="steps section-narrow">
+      <div><h2>In 3 stappen een<br>eerste idee.</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus nunc ultrices sodales.</p></div>
+      <ol class="step-flow">
+        <li><i><svg viewBox="0 0 24 24"><path d="m4 15 7-7 5 5-7 7H4v-5Z"/><path d="m14 5 2-2 5 5-2 2"/></svg></i> Vul je gegevens in</li><li><i><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2h6v4H9zM9 11h6M9 15h4"/></svg></i> Ontvang gratis Quick Scan</li><li><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M22 12h-3"/></svg></i> Kies je volgende stap</li>
+      </ol>
+    </section>
+
+    <section class="packages section-narrow">
+      <h2>Je huis verbouwen of overwegen?<br>Waar begin je?</h2>
+      <p class="intro">Voor elke situatie is het juiste plan. Kies voor een<br>van onze pakketten.</p>
+      <div class="package-grid">
+        <article class="package featured" data-href="bestemming.html?pagina=vergunningsvrij"><span class="tag">Meest gekozen</span><div class="round-icon"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9h-6v-6h-4v6H4v-9Z"/><path d="M8 8V5h3"/></svg></div><h3>Vergunningsvrij<br>Verbouwen</h3><h4>De beste keuze als:</h4><ul><li>Je niet zeker weet of je een vergunning nodig hebt.</li><li>Je verbouw idee wilt verkennen</li><li>Je alleen binnenwerkzaamheden gaat verrichten</li></ul><p>Pakket prijs <strong>€59,-</strong></p><a class="button button-purple" href="bestemming.html?pagina=vergunningsvrij">Direct regelen</a></article>
+        <article class="package" data-href="bestemming.html?pagina=persoonlijk-advies"><div class="round-icon"><svg viewBox="0 0 24 24"><path d="M4 5h11v9H9l-5 4V5Z"/><path d="M13 9h7v9h-3l-4 3v-7"/></svg></div><h3>Persoonlijk<br>Advies</h3><h4>De beste keuze als:</h4><ul><li>Je niet zeker weet of je een vergunning nodig hebt.</li><li>Je verbouw idee wilt verkennen</li><li>Je alleen binnenwerkzaamheden gaat verrichten</li></ul><p>Pakket prijs <strong>€159,-</strong></p><a class="button button-purple" href="bestemming.html?pagina=persoonlijk-advies">Direct regelen</a></article>
+        <article class="package" data-href="bestemming.html?pagina=compleet"><div class="round-icon"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><h3>Verbouw pakket<br>Compleet</h3><h4>De beste keuze als:</h4><ul><li>Je niet zeker weet of je een vergunning nodig hebt.</li><li>Je verbouwing nodig hebt.</li><li>Je alleen binnenwerkzaamheden gaat verrichten</li></ul><p>Pakket prijs <strong>€459,-</strong></p><a class="button button-purple" href="bestemming.html?pagina=compleet">Direct regelen</a></article>
+      </div>
+      <p class="all-link">Het juiste pakket niet gevonden? <a href="bestemming.html?pagina=alle-pakketten">Bekijk alle pakketten en rapporten</a></p>
+    </section>
+
+    <section class="promise section-wide"><span class="brand-emblem promise-emblem" aria-hidden="true"></span>
+      <div><h2>Jouw verbouwing<br>is bij ons <span>goed<br>geregeld!</span></h2><a class="button button-yellow" href="#quickscan">Gratis Verbouwcheck</a></div>
+      <div class="benefits"><article><b>✎</b><h3>Advies op maat</h3><p>Een stukje tekst, lorem ipsum doler sit amet connecter.</p></article><article><b>✎</b><h3>Kostenindicatie</h3><p>Een stukje tekst, lorem ipsum doler sit amet connecter.</p></article><article><b>✎</b><h3>Snel inzicht</h3><p>Een stukje tekst, lorem ipsum doler sit amet connecter.</p></article><article><b>✎</b><h3>Risicobeperking</h3><p>Een stukje tekst, lorem ipsum doler sit amet connecter.</p></article></div>
+    </section>
+
+    <section class="articles section-wide">
+      <h2>Handige informatie</h2><p class="intro">Zaken waar wij van merken dat mensen vaak<br>tegenaan lopen bij hun verbouwing.</p>
+      <div class="carousel-shell"><button class="carousel-button prev" aria-label="Vorige artikelen">‹</button><div class="article-grid" id="articleCarousel">
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>Zelf verbouwen of toch een vakman?</h3><p>Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie. Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie.</p><a href="bestemming.html?pagina=artikel-start">Lees verder&nbsp; →</a></div></article>
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>Zelf verbouwen of toch een vakman?</h3><p>Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie. Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie.</p><a href="bestemming.html?pagina=artikel-vakman">Lees verder&nbsp; →</a></div></article>
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>Zelf verbouwen of toch een vakman?</h3><p>Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie. Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie.</p><a href="bestemming.html?pagina=artikel-kosten">Lees verder&nbsp; →</a></div></article>
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>Zelf verbouwen of toch een vakman?</h3><p>Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie. Ontvang binnen 24 uur advies op basis van jouw persoonlijke situatie.</p><a href="bestemming.html?pagina=artikel-aannemer">Lees verder&nbsp; →</a></div></article>
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>Een realistisch verbouwbudget maken</h3><p>Breng materialen, arbeid en onvoorziene kosten vooraf overzichtelijk in kaart.</p><a href="bestemming.html?pagina=artikel-budget">Lees verder&nbsp; →</a></div></article>
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>Heb ik een vergunning nodig?</h3><p>Lees welke werkzaamheden vaak vergunningsvrij zijn en wanneer controle nodig is.</p><a href="bestemming.html?pagina=artikel-vergunning">Lees verder&nbsp; →</a></div></article>
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>De juiste aannemer kiezen</h3><p>Vergelijk offertes, ervaringen en afspraken voordat de werkzaamheden beginnen.</p><a href="bestemming.html?pagina=artikel-aannemer-kiezen">Lees verder&nbsp; →</a></div></article>
+        <article><img src="assets/article-original.jpg" alt="Kranen bij een gebouw in aanbouw"><div><h3>Zo bereid je een verbouwing voor</h3><p>Een heldere planning helpt om keuzes, kosten en werkzaamheden beheersbaar te houden.</p><a href="bestemming.html?pagina=artikel-voorbereiden">Lees verder&nbsp; →</a></div></article>
+      </div><button class="carousel-button next" aria-label="Volgende artikelen">›</button></div><div class="carousel-dots" aria-hidden="true"><span></span><span class="active"></span><span></span></div>
+    </section>
+
+    <section class="faq section-narrow" id="faq">
+      <h2>Veelgestelde vragen</h2><p class="intro">Een verbouwing is niet niks, daar heb je vast<br>vragen over. Wij hebben antwoorden.</p>
+      <details><summary>Wat kost een gemiddelde verbouwing?</summary><p>De kosten hangen af van de omvang, materialen en werkzaamheden. Met de Verbouwcheck ontvang je een eerste indicatie.</p></details>
+      <details><summary>Hoe lang duurt een verbouwing gemiddeld?</summary><p>Een kleine verbouwing duurt vaak enkele weken; grotere projecten kunnen meerdere maanden duren.</p></details>
+      <details><summary>Hoe weet ik of ik een omgevingsvergunning nodig heb?</summary><p>Dat hangt af van het type verbouwing en je locatie. Wij helpen je dit snel te controleren.</p></details>
+      <details><summary>Wat zijn de regels voor bouwen op de erfgrens?</summary><p>De regels verschillen per situatie en gemeente. Controleer dit voordat je start.</p></details>
+      <a class="faq-link" href="bestemming.html?pagina=faq">Bekijk alle veelgestelde vragen →</a>
+    </section>
+
+    <section class="contact-strip section-narrow"><div><h2>Heeft u nog vragen?</h2><p>Stuur een e-mail naar <a href="mailto:info@verbouwland.nl">info@verbouwland.nl</a><br>of bel <a href="tel:+3112345678">06 123 45 678</a></p></div><a class="button button-purple" href="#quickscan">Gratis Verbouwcheck</a><img class="advisor" src="assets/advisor.png" alt="Verbouwland adviseur met laptop"></section>
+  </main>
+
+  <footer class="section-wide"><span class="brand-emblem footer-emblem" aria-hidden="true"></span><div><a class="brand" href="index.html"><img src="assets/verbouwland-logo.png" alt="Verbouwland"></a><p>Begin jouw verbouwing makkelijk en<br>snel met onze gratis QuickScan.</p><a class="button button-purple" href="#quickscan">Gratis Verbouwcheck</a></div><div><h3>Landingspagina's</h3><a href="bestemming.html?pagina=aannemer">Hoe kies ik een aannemer</a><a href="bestemming.html?pagina=kosten">Verbouwkosten</a><a href="bestemming.html?pagina=keuken">Nieuwe keuken</a><a href="bestemming.html?pagina=vergunningen">Vergunningen in Nederland</a><a href="bestemming.html?pagina=uitbouwen">Uitbouwen</a></div><div><h3>Contact</h3><p>Claudius Prinsenlaan 12<br>4811 DK Breda<br>The Netherlands</p><div class="socials"><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-1 .4-1 1-1Z"/></svg></a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></div></div><div class="copyright">© 2025 Verbouwland &nbsp; <span>Jouw verbouwing goed geregeld ♡</span><div class="legal-links"><a href="bestemming.html?pagina=cookies">Cookies</a><a href="bestemming.html?pagina=privacy">Privacy</a></div><div class="footer-cutout" aria-hidden="true"></div></div></footer>
+  <script src="script.js?v=3"></script>
+</body>
+</html>
+
