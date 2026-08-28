@@ -29,3 +29,8 @@ body::before{content:"";position:absolute;top:0;left:0;right:0;height:40px;backg
 /* Rotated and enlarged Verbouwland background marks */
 main{overflow:hidden}main::before{inset:300px 0 100px;background-image:url('assets/emblem-tilted.png');background-size:760px 760px;transform:none}.promise::before,.promise::after{inset:-30px;background-image:url('assets/emblem-tilted.png');transform:none}
 
+/* Reliable web images and near-full-width desktop layout */
+.hero{width:calc(100% - 28px);max-width:none;background-image:url('assets/hero-wide.jpg')}.section-wide{width:calc(100% - 28px);max-width:none}
+
+@media(max-width:800px){.hero,.section-wide{width:100%}footer.section-wide{width:calc(100% - 28px)}}
+
