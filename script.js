@@ -14,9 +14,9 @@ if (postcodeInput) {
 
 const quickscanForm = document.querySelector('#quickscan');
 if (quickscanForm) {
-  quickscanForm.addEventListener('submit', () => {
+  quickscanForm.addEventListener('submit', (event) => {
     const successMessage = document.querySelector('#quickscanSuccess');
-    const submitButton = quickscanForm.querySelector('button[type="submit"]');
+    const submitButton = quickscanForm.querySelector('button[type="submit"]'); const emailStep = quickscanForm.querySelector('.email-step'); const emailInput = emailStep.querySelector('input'); if (emailStep.hidden) { event.preventDefault(); emailStep.hidden = false; emailInput.disabled = false; submitButton.textContent = 'Aanvraag versturen'; submitButton.setAttribute('aria-expanded', 'true'); quickscanForm.classList.add('email-visible'); emailInput.focus(); return; }
     submitButton.disabled = true;
     submitButton.textContent = 'Wordt verstuurd…';
     window.setTimeout(() => {
