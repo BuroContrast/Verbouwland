@@ -87,7 +87,7 @@ main{overflow:hidden}main::before{inset:300px 0 100px;background-image:url('asse
 .form-success>span{flex:0 0 38px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--purple);font-size:23px;font-weight:900}
 .form-success strong,.form-success small{display:block}.form-success strong{font-size:17px;color:var(--purple);margin-bottom:3px}.form-success small{font-size:12px;line-height:1.45}
 @keyframes success-pop{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
-.address-form button:disabled{cursor:wait;opacity:.85}
+.address-form button:disabled{cursor:wait;opacity:.85}.email-step{animation:email-reveal .28s ease-out both}.email-step[hidden]{display:none}@keyframes email-reveal{from{opacity:0;transform:translateY(8px);width:0;padding-left:0;padding-right:0}to{opacity:1;transform:none}}.address-form.email-visible{width:min(880px,100%)}@media(max-width:800px){.address-form.email-visible{width:auto}}
 
 @media(max-width:800px){
   .promise.section-wide{width:calc(100% - 28px);margin-left:auto;margin-right:auto}
